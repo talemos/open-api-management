@@ -1,0 +1,75 @@
+swagger: '2.0'
+info:
+  version: '1.0'
+  title: "Micronaut Swagger"
+  description: Simple API for pet store Micronaut Demo.
+  license:
+    name: MIT
+    url: https://github.com/talemosoracle/micronaut-apiary-api
+host: 132.226.246.150:8080
+basePath: /
+schemes:
+- http
+consumes:
+- application/json
+produces:
+- application/json
+paths:
+  /pets:
+    x-summary: Get all the Pets of the store
+    get:
+      summary: List All Pets
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Pets'
+          examples:
+            application/json:
+              - name: "Dino"
+              - name: "Baby Puss"
+              - name: "Hoppy"
+  /owners:
+    x-summary: Get all the Owners of the store
+    get:
+      summary: List All Owners
+      responses:
+        200:
+          description: Successful Response
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/Owner'
+          examples:
+            application/json:
+              - id: 9
+                name: "Fred"
+                age: 45
+              - id: 10
+                name: "Barney"
+                age: 40
+definitions:
+  Pets:
+    title: Object Pet
+    type: object
+    properties:
+      name:
+        type: string
+    required:
+      - name
+  Owner:
+    title: Object Owner
+    type: object
+    properties:
+      id:
+        type: integer
+      name:
+        type: string
+      age:
+        type: integer
+    required:
+      - id
+      - name
+      - age
