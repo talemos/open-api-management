@@ -26,7 +26,6 @@ module "create_pets_deployment" {
   gateway_ocid = module.create_pets_oci_gateway.gateway_ocid
   gateway_compartment_ocid = var.compartment_ocid
   gateway_path_prefix = "/"
-  gateway_backend = [{path = "/pets", type = "HTTP_BACKEND", url = "http://132.226.246.150:8080/pets"}, 
-      {path = "/owners", type = "HTTP_BACKEND", url = "http://132.226.246.150:8080/owners"}]
+  gateway_backend = [{path = "/pets", type = "HTTP_BACKEND", url = "http://132.226.246.150:8080/pets"}]
   gateway_deployment_display_name = "Pets Store Deployment"
 }
