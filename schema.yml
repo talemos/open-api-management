@@ -1,0 +1,29 @@
+title: "Resource Manager PetStore Stack"
+stackDescription: "A stack to create and manage APIs in Oracle Cloud Infrastructure"
+schemaVersion: 1.1.0
+version: "20200301"
+variableGroups:
+    - title: "Required Inputs"
+      variables
+        - "region"
+        - "compartment_ocid"
+        - "subnet_ocid"       
+variables:
+    "region":
+        type: oci:identity:region:name
+        visible: true
+        required: true
+        title: "Region"
+        description: "The region to run this stack"  
+    "compartment_ocid":
+        type: oci:identity:compartment:id
+        visible: true
+        required: true
+        title: "Compartment"
+        description: "The compartment to create the resources"
+    "subnet_ocid":
+        type: oci:core:subnet:id
+        visible: true
+        required: true
+        title: "Subnet"
+        description: "the subnet to create the API Gateway for the deployment of the APIs"
