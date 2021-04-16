@@ -2,7 +2,7 @@ title: "Resource Manager PetStore Stack"
 stackDescription: "A stack to create and manage APIs in Oracle Cloud Infrastructure"
 schemaVersion: 1.1.0
 version: "20200301"
-logoUrl: https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grri30nzv1ul/b/public/o/content.png
+logoUrl: "https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grri30nzv1ul/b/public/o/content.png"
 locale: "en"
 variableGroups:
     - title: "Required Inputs"
@@ -41,4 +41,3 @@ variables:
         dependsOn:
             compartmentId: compartment_ocid
             vcnId: vcn_ocid
-            hidePrivateSubnet: true
