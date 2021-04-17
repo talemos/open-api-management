@@ -1,10 +1,10 @@
-title: "Resource Manager PetStore Stack"
-description: "This stack provides the basic terraform modules to help developers manager APIs on Oracle Cloud Infrastructure LOL"
-stackDescription: "A stack to create and manage APIs in Oracle Cloud Infrastructure"
+title: "Resource Manager OpenAPI Stack"
+description: "This stack provides the basic terraform modules to help developers manager APIs on Oracle Cloud Infrastructure"
+stackDescription: "A stack to manage APIs in Oracle Cloud Infrastructure"
 informationalText: "The Pet Store Demo is so cool, that I want to develop more stacks on OCI"
 schemaVersion: 1.1.0
 version: "20200301"
-logoUrl: https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grri30nzv1ul/b/public/o/content.png
+logoUrl: https://objectstorage.sa-saopaulo-1.oraclecloud.com/n/grri30nzv1ul/b/public/o/OpenAPI-Logo.png
 variableGroups:
     - title: "Required Inputs"
     - variables:
@@ -43,6 +43,54 @@ variables:
             compartmentId: compartment_ocid
             vcnId: vcn_ocid
 outputs:
-    api_gateway_ocid:
+    oci_gateway_ocid:
         type: ocid
         visible: true
+    oci_gateway_hostname:
+        type: string
+        visible: true
+    oci_gateway_endpoint_type:
+        type: string
+        visible: true
+    oci_gateway_display_name:
+        type: string
+        visible: true
+    api_resource_ocid:
+        type: ocid
+        visible: true
+    api_resource_specification_type:
+        type: string
+        visible: true
+    api_resource_lifecycle_status:
+        type: string
+        visible: true
+    oci_deployment_display_name:
+        type: string
+        visible: true
+    oci_deployment_endpoint:
+        type: link
+        visible: true
+    oci_deployment_lifecycle_details:
+        type: string
+        visible: true
+    oci_deployment_backend_routes:
+        type: list
+        visible: true
+outputGroups:
+  - title: API Gateway
+    outputs:
+      - oci_gateway_ocid
+      - oci_gateway_display_name
+      - oci_gateway_endpoint_type
+      - oci_gateway_hostname
+  - title: APIs descriptions
+    outputs:
+      - api_resource_ocid
+      - api_resource_specification_type
+      - api_resource_lifecycle_status
+  - title: Backend Deployments
+    outputs:
+      - oci_deployment_display_name
+      - oci_deployment_endpoint
+      - oci_deployment_lifecycle_details
+      - oci_deployment_backend_routes

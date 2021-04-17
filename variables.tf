@@ -6,7 +6,7 @@ variable "region" {
 #APIs Variables
 variable "compartment_ocid" {
     type = string
-    description = "ocid1.compartment.oc1..aaaaaaaaoktk7plmojxogbad7ws6g2ideob73ja5stbizet3mvqsj62bhsxq"
+    default = "ocid1.compartment.oc1..aaaaaaaaoktk7plmojxogbad7ws6g2ideob73ja5stbizet3mvqsj62bhsxq"
 }
 variable "vcn_ocid" {
     type = string
