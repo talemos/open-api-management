@@ -34,10 +34,6 @@ output "oci_deployment_endpoint" {
   value = module.create_oci_deployment.deployment_endpoint
 }
 
-output "oci_deployment_lifecycle_details" {
-  value = module.create_oci_deployment.deployment_lifecycle_details
-}
-
 output "oci_deployment_display_name" {
   value = module.create_oci_deployment.deployment_display_name
 }

@@ -70,9 +70,6 @@ outputs:
     oci_deployment_endpoint:
         type: link
         visible: true
-    oci_deployment_lifecycle_details:
-        type: string
-        visible: true
     oci_deployment_backend_routes:
         type: list
         visible: true
@@ -92,5 +89,4 @@ outputGroups:
     outputs:
       - oci_deployment_display_name
       - oci_deployment_endpoint
-      - oci_deployment_lifecycle_details
       - oci_deployment_backend_routes
