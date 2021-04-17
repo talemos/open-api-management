@@ -40,7 +40,7 @@ resource "oci_apigateway_deployment" "deployment" {
           url = routes.value.url
         }
         path    = routes.value.path
-        methods = ["GET"]
+        methods = routes.value.methods
         request_policies {
           cors {
             #Required

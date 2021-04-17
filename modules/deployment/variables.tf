@@ -4,6 +4,6 @@ variable "gateway_compartment_ocid" {}
 variable "gateway_path_prefix" {}
 variable "gateway_deployment_display_name" {}
 variable "gateway_backend" {
-    type = list(object({path = string, type = string, url = string}))
+    type = list(object({path = string, type = string, methods = list(string), url = string}))
     default = []
 }

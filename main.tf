@@ -3,7 +3,7 @@ provider "oci" {
   region = var.region
 }
 
-module "create_pets_api_swagger" {
+module "create_api_resource" {
   source = "./modules/api"
   
   api_compartment_ocid = var.compartment_ocid
@@ -11,7 +11,7 @@ module "create_pets_api_swagger" {
   api_display_name = "Pets Store Swagger"
 }
 
-module "create_pets_oci_gateway" {
+module "create_oci_gateway" {
   source = "./modules/gateway"
 
   gateway_compartment_ocid = var.compartment_ocid
@@ -20,13 +20,13 @@ module "create_pets_oci_gateway" {
   gateway_endpoint_type = "PUBLIC"
 }
 
-module "create_pets_deployment" {
+module "create_oci_deployment" {
   source = "./modules/deployment"
 
-  gateway_ocid = module.create_pets_oci_gateway.gateway_ocid
+  gateway_ocid = module.create_oci_gateway.gateway_ocid
   gateway_compartment_ocid = var.compartment_ocid
   gateway_path_prefix = "/"
-  gateway_backend = [{path = "/pets", type = "HTTP_BACKEND", url = "http://132.226.246.150:8080/pets"}, 
-      {path = "/owners", type = "HTTP_BACKEND", url = "http://132.226.246.150:8080/owners"}]
+  gateway_backend = [{path = "/pets", type = "HTTP_BACKEND", methods = ["GET"], url = "http://132.226.246.150:8080/pets"}, 
+      {path = "/owners", type = "HTTP_BACKEND", methods = ["GET"], url = "http://132.226.246.150:8080/owners"}]
   gateway_deployment_display_name = "Pets Store Deployment"
 }
