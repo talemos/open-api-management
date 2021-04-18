@@ -18,4 +18,4 @@ Clone this repo and build the basic components and modules in terraform for your
 - [Terraform Built-in Functions](https://www.terraform.io/docs/language/functions/index.html)
 
 ## Try it on OCI
-[![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/talemos/petstore-api-management/releases/latest)
+[![Deploy to Oracle Cloud](https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)](https://cloud.oracle.com/resourcemanager/stacks/create?zipUrl=https://github.com/talemos/open-api-management/releases/latest)
