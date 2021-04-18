@@ -16,3 +16,11 @@ Please clone the repo and build the basic components and modules in terraform fo
 - [OCI terraform provider Docs](https://docs.oracle.com/en-us/iaas/Content/API/SDKDocs/terraform.htm)
 - [Terraform provider - Oracle GitHub](https://github.com/terraform-providers/terraform-provider-oci)
 - [Terraform Built-in Functions](https://www.terraform.io/docs/language/functions/index.html)
+
+## Tryit on OCI
+[
+![Deploy to Oracle Cloud]
+(https://oci-resourcemanager-plugin.plugins.oci.oraclecloud.com/latest/deploy-to-oracle-cloud.svg)
+]
+(https://cloud.oracle.com/resourcemanager/stacks/create
+?zipUrl=https://github.com/talemos/petstore-api-management/releases/latest)
