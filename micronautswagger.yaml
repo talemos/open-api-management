@@ -6,7 +6,7 @@ info:
   license:
     name: MIT
     url: https://github.com/talemosoracle/micronaut-apiary-api
-host: 10.0.1.76:8080
+host: 132.226.246.150:8080
 basePath: /
 schemes:
 - http
