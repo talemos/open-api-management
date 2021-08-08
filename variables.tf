@@ -1,12 +1,12 @@
 #Provider Variables
 variable "region" {
     type = string
-    default = "sa-saopaulo-1"
+    default = "us-ashburn-1"
 }
 #APIs Variables
 variable "compartment_ocid" {
     type = string
-    default = "ocid1.compartment.oc1..aaaaaaaaoktk7plmojxogbad7ws6g2ideob73ja5stbizet3mvqsj62bhsxq"
+    default = "ocid1.compartment.oc1..aaaaaaaa2qvltr6q42ii2bnhi6lvnby4ixwzyyaem4xkuuimvbglyvw2ztpq"
 }
 variable "vcn_ocid" {
     type = string
@@ -14,5 +14,5 @@ variable "vcn_ocid" {
 }
 variable "subnet_ocid" {
     type = string
-    default = "ocid1.subnet.oc1.sa-saopaulo-1.aaaaaaaa6mgix7z5dhe7chbubqndhtalmnt67vndcma3vjrv65o3pt422u7q"
+    default = "ocid1.subnet.oc1.iad.aaaaaaaasil2tucqkm77rmalqua3npemkxzkwtso6m75ih72kgoxoekkfura"
 }
